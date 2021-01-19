@@ -1,4 +1,4 @@
-import { Engine } from './Engine'
+import { Engine } from './engine'
 
 describe('Engine', () => {
   it('should start with an empty board', () => {
