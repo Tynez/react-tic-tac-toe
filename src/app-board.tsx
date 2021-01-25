@@ -4,16 +4,18 @@ import { PlayerToken } from './tictactoe'
 import './board.css'
 
 interface Props {
-  board: PlayerToken[]
+  actualBoard: PlayerToken[]
+  onSlotClick(slot: number): void
 }
-export const Board: FC<Props> = ({ board }) => {
+
+export const Board: FC<Props> = ({ actualBoard, onSlotClick }) => {
   return (
-    <section id={'board'}>
-      {board.map((element, key) => (
-        <div key={key} className={`${element}`}>
+    <ul id={'board'}>
+      {actualBoard.map((element, idx) => (
+        <li key={idx} className={`${element}`} onClick={() => onSlotClick(idx)}>
           <div className={'token'}></div>
-        </div>
+        </li>
       ))}
-    </section>
+    </ul>
   )
 }
