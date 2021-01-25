@@ -1,4 +1,4 @@
-import type { PlayerToken, ScoreBoard } from './tictactoe'
+import type { PlayerToken, ScoreBoard } from './utils/tictactoe'
 
 export class Engine {
   private gameStatus: PlayerToken[]

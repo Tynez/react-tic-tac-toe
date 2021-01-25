@@ -1,6 +1,6 @@
 import { FC } from 'react'
-import { ScoreBoard } from './tictactoe'
-import styles from './scoreboard.module.css'
+import { ScoreBoard } from '../utils/tictactoe'
+import styles from '../styles/scoreboard.module.css'
 
 interface Props {
   actualScore: ScoreBoard

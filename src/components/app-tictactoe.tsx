@@ -1,5 +1,5 @@
 import { FC, useState } from 'react'
-import { Engine } from './engine'
+import { Engine } from '../engine'
 import { Board } from './app-board'
 import { Scoreboard } from './app-scoreboard'
 import { GameOver } from './app-game-over'

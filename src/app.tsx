@@ -1,10 +1,11 @@
+import './styles/theme.css'
 import './app.css'
-import {TicTacToe} from "./app-tictactoe";
+import { TicTacToe } from './components/app-tictactoe'
 
 function App() {
   return (
     <main className="App">
-        <TicTacToe/>
+      <TicTacToe />
     </main>
   )
 }

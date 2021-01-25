@@ -1,6 +1,6 @@
 import { FC } from 'react'
-import styles from './game-over.module.css'
-import { bind } from './utils/bind'
+import styles from '../styles/game-over.module.css'
+import { bind } from '../utils/bind'
 
 interface Props {
   isGameOver: boolean

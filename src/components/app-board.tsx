@@ -1,7 +1,7 @@
 import { FC } from 'react'
-import { PlayerToken } from './tictactoe'
-import { bind } from './utils/bind'
-import styles from './board.module.css'
+import { PlayerToken } from '../utils/tictactoe'
+import { bind } from '../utils/bind'
+import styles from '../styles/board.module.css'
 
 interface Props {
   actualBoard: PlayerToken[]
