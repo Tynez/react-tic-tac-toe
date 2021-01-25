@@ -1,4 +1,4 @@
-#board {
+.board {
   list-style: none;
   max-width: var(--container);
   margin: 0 auto;
@@ -15,7 +15,7 @@
   overflow: hidden;
 }
 
-#board::after {
+.board::after {
   content: '';
   background-color: var(--foreground-color);
   border-radius: var(--circle);
@@ -39,20 +39,20 @@
   }
 }
 
-#board > li {
+.board > li {
   background-color: var(--background-color);
   position: relative;
   z-index: 10;
 }
 
-#board > li:after {
+.board > li:after {
   content: '';
   display: block;
   padding-bottom: 100%;
 }
 
-#board > .board--first-player-token .token,
-#board > .board--second-player-token .token {
+.board > .board--first-player-token .token,
+.board > .board--second-player-token .token {
   height: 100%;
   width: 100%;
   position: absolute;
@@ -65,8 +65,8 @@
   background-color: transparent;
 }
 
-#board > .board--first-player-token .token::after,
-#board > .board--first-player-token .token::before {
+.board > .board--first-player-token .token::after,
+.board > .board--first-player-token .token::before {
   content: '';
   position: absolute;
   border-radius: var(--circle);
@@ -74,14 +74,14 @@
   transition: all 0.2s ease-out;
 }
 
-#board > .board--first-player-token .token::after {
+.board > .board--first-player-token .token::after {
   width: 70%;
   height: 70%;
   background-color: var(--foreground-color);
   z-index: 14;
 }
 
-#board > .board--first-player-token .token::before {
+.board > .board--first-player-token .token::before {
   width: 60%;
   height: 60%;
   background-color: var(--background-color);
@@ -98,8 +98,8 @@
   }
 }
 
-#board > .board--second-player-token .token::after,
-#board > .board--second-player-token .token::before {
+.board > .board--second-player-token .token::after,
+.board > .board--second-player-token .token::before {
   content: '';
   width: 80%;
   height: 5%;
@@ -108,11 +108,11 @@
   transition: all 0.2s ease-out;
 }
 
-#board > .board--second-player-token .token::after {
+.board > .board--second-player-token .token::after {
   animation: second-player-token-rotation-right 0.2s ease-out forwards;
 }
 
-#board > .board--second-player-token .token::before {
+.board > .board--second-player-token .token::before {
   animation: second-player-token-rotation-left 0.2s ease-out forwards;
 }
 
@@ -138,8 +138,8 @@
   }
 }
 
-#board.game-over > .board--first-player-token:not(.board--winner-token) .token::after,
-#board.game-over > .board--second-player-token:not(.board--winner-token) .token::after,
-#board.game-over > .board--second-player-token:not(.board--winner-token) .token::before {
+.board.game-over > .board--first-player-token:not(.board--winner-token) .token::after,
+.board.game-over > .board--second-player-token:not(.board--winner-token) .token::after,
+.board.game-over > .board--second-player-token:not(.board--winner-token) .token::before {
   background-color: var(--disabled-color);
 }
