@@ -1,6 +1,7 @@
 import { FC, useState } from 'react'
 import { Engine } from './engine'
 import { Board } from './app-board'
+import { Scoreboard } from './app-scoreboard'
 
 export const TicTacToe: FC = () => {
   const [engine] = useState(new Engine())
@@ -14,7 +15,8 @@ export const TicTacToe: FC = () => {
   return (
     <section>
       <h1>Tic Tac Toe</h1>
-      <Board actualBoard={[...board]} onSlotClick={clickedSlot => updateBoard(clickedSlot)}></Board>
+      <Scoreboard actualScore={{ ...engine.scoreBoard }} />
+      <Board actualBoard={[...board]} onSlotClick={clickedSlot => updateBoard(clickedSlot)} />
     </section>
   )
 }
